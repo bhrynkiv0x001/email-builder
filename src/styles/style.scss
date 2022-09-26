@@ -1,0 +1,159 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #2e1334;
+}
+
+.container-body {
+  vertical-align: top;
+  padding: 30px;
+}
+
+.header {
+  height: 100px;
+}
+
+.header-logo {
+  max-width: 150px;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.footer-body {
+  float: right;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.sub-title {
+  font-weight: 400;
+}
+
+.copyright {
+  margin-top: 24px;
+  line-height: 43px;
+}
+
+.copyright img {
+  width: 120px;
+  margin-left: 10px;
+}
+
+.info-text {
+  margin-top: 38px;
+  color: #877997;
+}
+
+.card {
+  width: 500px;
+  margin: 0 auto;
+  padding: 36px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 24px;
+  border-top-left-radius: 0;
+  margin-bottom: 10%;
+}
+
+.referenceInvite-card {
+  width: 500px;
+  margin: 0 auto;
+  padding: 36px;
+  padding-top: 30px;
+  background-color: #fff;
+  border-radius: 24px;
+  border-top-left-radius: 0;
+  margin-bottom: 10%;
+}
+
+.card-body {
+  width: 100%;
+}
+
+.email {
+  border-top: 1px solid #481453;
+  border-bottom: 1px solid #481453;
+  padding: 14px 0 14px;
+}
+
+.email strong {
+  display: block;
+  margin: 14px 0 8px;
+}
+
+.text {
+  color: #2e1334;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 120%;
+  margin: 0;
+  font-weight: 600;
+}
+
+.referenceInvite-text {
+  color: #2e1334;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 120%;
+  margin: 0;
+  font-weight: normal;
+}
+
+.user-card {
+  width: 300px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 0px 16px 16px 40px;
+  margin-top: 14px;
+}
+
+.user-avatar {
+  margin-right: 14px;
+}
+
+.user-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 0px 200px 200px 200px;
+}
+
+.divider {
+  height: 30px;
+}
+
+.description p {
+  color: #51425e;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #481453;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  letter-spacing: 0.04rem;
+}
+
+.button-outlined {
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: 2px solid #481453;
+  color: #481453;
+  text-decoration: none;
+  font-family: sans-serif;
+  letter-spacing: 0.04rem;
+  margin-right: 14px;
+}

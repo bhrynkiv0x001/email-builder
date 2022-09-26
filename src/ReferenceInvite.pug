@@ -1,0 +1,33 @@
+include ./layouts/header
++header('Onboarding')
+body
+  table(role="presentation", background="https://i.ibb.co/Czq4sZW/Color-PINK-GREEN-1.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="https://i.ibb.co/N9JWYYn/Deeto-Logo-for-google.png", alt="Deeto copyright logo").header-logo
+        center.referenceInvite-card
+          table.card-body
+            tr
+              td
+                p.referenceInvite-text
+                  | Hey ${firstName}, <br /> <br />
+                  | We enjoyed working with you! We would love to use you as reference (plus you’ll get rewards on us), how does that sound? <br /> <br />
+                  | All the best, <br />
+                  | ${companyName}
+            tr.divider
+            tr.list-item
+              td
+                div.action-card
+                  a(href="http://localhost:3000/auth", target="_blank").button-outlined
+                    | No, thank you
+                  a(href="http://localhost:3000/auth", target="_blank").button
+                    | Count me in
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://i.ibb.co/N9JWYYn/Deeto-Logo-for-google.png", alt="Deeto copyright logo")
