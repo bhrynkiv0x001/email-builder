@@ -1,0 +1,47 @@
+include ./layouts/header
++header('New Prospect')
+body
+  table(role="presentation", background="https://i.ibb.co/Czq4sZW/Color-PINK-GREEN-1.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="https://i.ibb.co/N9JWYYn/Deeto-Logo-for-google.png", alt="Deeto copyright logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hey ${firstName}, <br /> <br />
+                  | You have been suggested as a reference for ${companyName}! <br /> <br />
+                  | ${companyName} has suggested you as reference for a new prospect in the marketing field, be on the look out for an email to schedule a call with:
+            tr.divider
+          table
+            tr.list-item
+              td
+                div.user-card
+                  table
+                    td
+                      div.user-avatar
+                        img(src="https://i.ibb.co/DQ2BC7q/Human-Default.png", alt="Person")
+                    td
+                      div.description
+                        strong
+                          | Shane Boyle
+                        p
+                          | CEO of Thrive
+            tr.divider
+            tr
+              td
+                p.text
+                  | If you are busy at the moment
+                  |
+                  a(href="http://localhost:3000/", target="_blank")
+                    | click here
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://i.ibb.co/N9JWYYn/Deeto-Logo-for-google.png", alt="Deeto copyright logo")
