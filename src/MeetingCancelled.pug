@@ -1,0 +1,46 @@
+include ./layouts/header
++header('Invite not accepted - ${prospectName} from ${companyName}')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-yellow-red.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hi ${prospectName}, <br /> <br />
+                  | Unfortunately the ride isn’t always smooth… <br />
+                  | ${referenceName} is no longer available for your meeting on ${date}. <br />
+                  | Other references that ${salesRepName} from ${vendorName} recommended are still available to meet with you:
+            tr.divider
+          table
+            tr.list-item
+              td
+                div.user-card
+                  table
+                    td
+                      div.user-avatar
+                        img(src="https://i.ibb.co/DQ2BC7q/Human-Default.png", alt="Person")
+                    td
+                      div.description
+                        strong
+                          | ${referenceName}
+                        p
+                          | ${referencePosition}
+            tr.divider
+          table
+            tr
+              td.center
+                a.button-outlined
+                  | See additional recommended references
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo")

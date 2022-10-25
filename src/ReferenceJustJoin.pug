@@ -1,0 +1,52 @@
+include ./layouts/header
++header('Invite not accepted - ${prospectName} from ${companyName}')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-blue-pink.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hey ${salesRepName}, <br /> <br />
+                  | Great news!!! ${prospectName} just accepted your invite to join Deeto and they are now an active reference. <br />
+                  | You and your team can invite ${prospectName} to speak with a prospect, help you sale and close more deals faster.
+            tr.divider
+          table
+            tr.list-item
+              td
+                div.user-card
+                  table
+                    td
+                      div.user-avatar
+                        img(src="https://i.ibb.co/DQ2BC7q/Human-Default.png", alt="Person")
+                    td
+                      div.description
+                        strong
+                          | ${prospectName}
+                        p
+                          | ${prospectPosition}
+            tr.divider
+          table
+            tr
+              td
+                p.text
+                  | Quick Access to:
+            tr.divider
+            tr
+              td.center
+                a.button-outlined
+                  | ${prospectName} Profile
+                a.button-outlined
+                  | Invite Another New Reference
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo")

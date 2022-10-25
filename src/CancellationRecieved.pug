@@ -1,0 +1,26 @@
+include ./layouts/header
++header('Invite not accepted - ${prospectName} from ${companyName}')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-green-pink.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hi ${referenceName}, <br />
+                  | We received your request to cancel the meeting with ${prospectName}. <br />
+                  | We appreciate your willingness to support us with your knowledge, and look forward to the next opportunity to connect with one of ${vendorName}’s potential customers. <br /><br />
+                  | Thanks, <br />
+                  | ${vendorName}
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo")
