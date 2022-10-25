@@ -1,0 +1,74 @@
+include ./layouts/header
++header('${companyName} needs your help - New meeting request')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-green-pink.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        div.newProspect-card
+          table
+            tr.list-item
+              td
+                div.sender-card
+                  table
+                    td
+                      div.user-avatar
+                        img(src="${prospectAvatar}", alt="Person")
+                    td
+                      div.description
+                        strong
+                          | ${prospectName}
+                        p
+                          | ${prospectPosition}
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hi ${referenceName}, <br /><br />
+                  | Unfortunately I’m no longer availlable for our meeting at ${date}.
+                  | Please let me know if one of the below time slots works for you.
+                  | Best, <br />
+                  | ${prospectName}
+          table
+            h2.times-title
+              | Here are ${availableTimes} available times I can meet
+            p.text
+              | Select 1 time that works for you. If none of the selected times work, then you can suggest a new time.
+            br
+            p.text
+              | All times are ${timeZone}
+            table
+              tr.list-item
+                td
+                  div.user-card
+                    table
+                      td
+                        div.user-avatar
+                          img(src="https://deeto-images.s3.amazonaws.com/static/dates/${day}.png", alt="Person")
+                      td
+                        div.description
+                          strong
+                            | ${day}, ${month} ${dayNumber}
+                          p.title
+                            | ${time}
+                          button.button.mt-4
+                            | Select this time
+            table
+              tr
+                td.actions
+                  button.button-outlined
+                    | Suggest a new time
+                  span.text
+                    | If you are busy at the moment
+                    |
+                    a(href="${redirectUrl}", target="_blank")
+                      | click here
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo")

@@ -1,0 +1,62 @@
+include ./layouts/header
++header('Meeting confirmed - ${prospectName} from ${companyName}')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-green-pink.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.textMain
+                  | You're scheduled, ${referenceName}. <br /> <br />
+            tr
+              td
+                p.textBig
+                  | Your call is on ${date} at ${time}
+            tr.divider
+          table
+            tr.list-item
+              td
+                div.user-card-prospect-request
+                  table
+                    tr
+                      td
+                        div.user-avatar-prospect
+                          img(src="${prospectAvatar}", alt="Person")
+                      td
+                        div.description
+                          strong.user-name
+                            | ${prospectName}
+                          p
+                            | ${prospectPosition}
+                  table
+                    tr.text-timeZone
+                      td
+                        p
+                          | Time zone
+                      td.rightColumn
+                        p.text-timeLight
+                          | ${timeZone}
+                    tr.dateTime
+                      td
+                        p
+                          | ${date}
+                      td.rightColumn
+                        p.text-timeLight
+                          | ${time}
+            tr.divider
+            tr.list-item
+              td.button-center
+                a(href="${redirectUrl}", target="_blank").button
+                  | Go to Dashboard
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://i.ibb.co/N9JWYYn/Deeto-Logo-for-google.png", alt="Deeto copyright logo")

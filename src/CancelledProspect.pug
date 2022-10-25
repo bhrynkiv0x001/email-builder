@@ -1,5 +1,5 @@
 include ./layouts/header
-+header('Welcome to Deeto')
++header('Meeting cancellation received')
 body
   table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-yellow-red.png", width="100%", height="100%").container
     tr
@@ -8,22 +8,15 @@ body
           tr
             td
               p.logo
-                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Company logo")
+                img(src="${companyLogo}", alt="Company logo")
         center.card
           table
             tr
               td
                 p.text
                   | Hi ${prospectName},<br /><br />
-                  | We are glad to have you on board with ${companyName}, we are inviting you
-                  | to schedule a call with our specially selected references.
-                  | <br />
-                  | Below are a few references who have all worked with us on a project
-                  | very similar to yours. You can choose to talk to three different
-                  | references who had requirements just like yours.
-                  | <br />
-                  | All the best,<br />
-                  | ${companyName}
+                  | We received your request to cancel the meeting with ${referenceName}.
+                  | Other references that ${salesRepName} recomended are still avaible to meet with you:
           table
             tr.list-item
               td

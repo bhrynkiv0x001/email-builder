@@ -1,0 +1,30 @@
+include ./layouts/header
++header('Meeting request')
+body
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-blue-pink.png", width="100%", height="100%").container
+    tr
+      td.container-body
+        table.header
+          tr
+            td
+              img(src="${companyLogo}", alt="Company logo").header-logo
+        center.newProspect-card
+          table.card-body
+            tr
+              td
+                p.text
+                  | Hey ${salesRepName}, <br /> <br />
+                  | ${prospectName} from ${prospectCompanyName} sent a meeting request to ${referenceName}. We will let you know as soon as a meeting between them is scheduled
+            tr.divider
+            tr.divider
+          table
+            tr
+              td.center
+                a.button-outlined
+                  | See ${prospectName} profile
+        table.footer
+          tr.footer-body
+            td
+              div.copyright
+                | © 2022. Powered by
+                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo")

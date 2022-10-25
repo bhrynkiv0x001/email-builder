@@ -1,5 +1,5 @@
 include ./layouts/header
-+header('Onboarding')
++header('New reward available')
 body
   table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-green-pink.png", width="100%", height="100%").container
     tr
@@ -8,21 +8,24 @@ body
           tr
             td
               img(src="${companyLogo}", alt="Company logo").header-logo
-        center.referenceInvite-card
+        center.newProspect-card
           table.card-body
             tr
               td
-                p.referenceInvite-text
+                p.text
                   | Hey ${referenceName}, <br /> <br />
-                  | We enjoyed working with you! We would love to use you as reference (plus you’ll get rewards on us), how does that sound? <br /> <br />
-                  | All the best, <br />
-                  | ${companyName}
-            tr.divider
-            tr.list-item
-              td
-                div.action-card
-                  a(href="${redirectUrl}", target="_blank").button
-                    | Count me in
+                  | We wanted to thank you for your help being a reference of ${companyName} and helping ${prospectName} make a more informed decision. <br />
+                  | As a token of our appreciation we added ${reward} to your deeto account. Please click below to redeem. <br /><br />
+                  | Your available balance is ${balance}
+          table
+            tr
+              p.emoji
+                | 🎉🎉🎉
+          table
+            tr
+              td.center
+                a.button-outlined
+                  | Redeem
         table.footer
           tr.footer-body
             td

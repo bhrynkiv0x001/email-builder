@@ -1,5 +1,5 @@
 include ./layouts/header
-+header('Welcome to Deeto')
++header('Meeting reminder - Your call with ${referenceName} starts in 30 minutes')
 body
   table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-yellow-red.png", width="100%", height="100%").container
     tr
@@ -7,23 +7,16 @@ body
         table.header
           tr
             td
-              p.logo
-                img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Company logo")
-        center.card
-          table
+              img(src="https://deeto-images.s3.amazonaws.com/static/logo-deeto.png", alt="Deeto copyright logo").header-logo
+        center.newProspect-card
+          table.card-body
             tr
               td
                 p.text
-                  | Hi ${prospectName},<br /><br />
-                  | We are glad to have you on board with ${companyName}, we are inviting you
-                  | to schedule a call with our specially selected references.
-                  | <br />
-                  | Below are a few references who have all worked with us on a project
-                  | very similar to yours. You can choose to talk to three different
-                  | references who had requirements just like yours.
-                  | <br />
-                  | All the best,<br />
-                  | ${companyName}
+                  | Hey ${prospectName}, <br /> <br />
+                  | Your meeting with ${referenceName} starts in 30 minutes. <br />
+                  | You can join the meeting by clicking below.
+            tr.divider
           table
             tr.list-item
               td
@@ -40,11 +33,10 @@ body
                           | ${referencePosition}
             tr.divider
           table
-            tr.list-item
-              td
-                div.action-card
-                  a(href="${redirectUrl}", target="_blank").button-outlined
-                    | See your references
+            tr
+              td.center
+                a.button-outlined
+                  | Join meeting
         table.footer
           tr.footer-body
             td

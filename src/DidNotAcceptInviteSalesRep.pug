@@ -1,21 +1,21 @@
 include ./layouts/header
-+header('New Prospect')
++header('Invite not accepted - ${prospectName} from ${companyName}')
 body
-  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-green-pink.png", width="100%", height="100%").container
+  table(role="presentation", background="https://deeto-images.s3.amazonaws.com/static/backgrounds/bg-blue-pink.png", width="100%", height="100%").container
     tr
       td.container-body
         table.header
           tr
             td
-              img(src="${companyLogo}", alt="Deeto copyright logo").header-logo
+              img(src="${companyLogo}", alt="Company logo").header-logo
         center.newProspect-card
           table.card-body
             tr
               td
                 p.text
-                  | Hey ${referenceName}, <br /> <br />
-                  | You have been suggested as a reference for ${companyName}! <br /> <br />
-                  | ${companyName} has suggested you as reference for a new prospect in the marketing field, be on the look out for an email to schedule a call with:
+                  | Hey ${salesRepName}, <br /> <br />
+                  | We noticed that ${prospectName} has not yet accepted the invite to connect with the personally selected references. <br />
+                  | You could send them a reminder or follow up with them to ensure they received your invite.
             tr.divider
           table
             tr.list-item
@@ -24,7 +24,7 @@ body
                   table
                     td
                       div.user-avatar
-                        img(src="${prospectAvatar}", alt="Person")
+                        img(src="https://i.ibb.co/DQ2BC7q/Human-Default.png", alt="Person")
                     td
                       div.description
                         strong
@@ -32,13 +32,11 @@ body
                         p
                           | ${prospectPosition}
             tr.divider
+          table
             tr
-              td
-                p.text
-                  | If you are busy at the moment
-                  |
-                  a(href="${redirectUrl}", target="_blank")
-                    | click here
+              td.center
+                a.button-outlined
+                  | See ${prospectName} profile
         table.footer
           tr.footer-body
             td

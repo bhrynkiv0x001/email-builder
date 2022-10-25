@@ -13,16 +13,11 @@ body
             tr
               td
                 p.referenceInvite-text
-                  | Hey ${referenceName}, <br /> <br />
-                  | We enjoyed working with you! We would love to use you as reference (plus you’ll get rewards on us), how does that sound? <br /> <br />
+                  | Hi ${referenceName}, <br /> <br />
+                  | Unfortunately ${prospectName} is no longer availlable for your meeting at ${date}.
+                  | We accreciate your willingness to help ${prospectName} and ${companyName} and we will be in touch soon.
                   | All the best, <br />
                   | ${companyName}
-            tr.divider
-            tr.list-item
-              td
-                div.action-card
-                  a(href="${redirectUrl}", target="_blank").button
-                    | Count me in
         table.footer
           tr.footer-body
             td
